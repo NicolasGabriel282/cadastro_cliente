@@ -1,0 +1,323 @@
+{
+  "_note1": "KEEP THIS FILE! Check it into a version control system (VCS) like git.",
+  "_note2": "ObjectBox manages crucial IDs for your object model. See docs for details.",
+  "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
+  "entities": [
+    {
+      "id": "1:1027336598408671115",
+      "lastPropertyId": "44:8823132489490646018",
+      "name": "Cliente",
+      "properties": [
+        {
+          "id": "1:7976633727726795668",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:2111300956095700270",
+          "name": "CNPJ",
+          "type": 9
+        },
+        {
+          "id": "3:1859551151191552112",
+          "name": "RazaoSocial",
+          "type": 9
+        },
+        {
+          "id": "4:1485020584827714607",
+          "name": "InscEstadual",
+          "type": 9
+        },
+        {
+          "id": "5:5965857286987760919",
+          "name": "InscMuni",
+          "type": 9
+        },
+        {
+          "id": "6:6265053420185299911",
+          "name": "CEP",
+          "type": 9
+        },
+        {
+          "id": "7:7494247901555940286",
+          "name": "Rua",
+          "type": 9
+        },
+        {
+          "id": "8:3381145830845352167",
+          "name": "Numero",
+          "type": 9
+        },
+        {
+          "id": "9:487080309168772087",
+          "name": "Bairro",
+          "type": 9
+        },
+        {
+          "id": "10:5850200410960865063",
+          "name": "Cidade",
+          "type": 9
+        },
+        {
+          "id": "11:8970066782643636640",
+          "name": "UF",
+          "type": 9
+        },
+        {
+          "id": "12:162322931387859560",
+          "name": "InforComple",
+          "type": 9
+        },
+        {
+          "id": "13:3854313289794135415",
+          "name": "CEPLCD",
+          "type": 9
+        },
+        {
+          "id": "14:8895870200454362600",
+          "name": "RuaLCD",
+          "type": 9
+        },
+        {
+          "id": "15:672402502061880138",
+          "name": "BairroLCD",
+          "type": 9
+        },
+        {
+          "id": "16:3433441624552455360",
+          "name": "CidadeLCD",
+          "type": 9
+        },
+        {
+          "id": "17:3675781767946825863",
+          "name": "UFLCD",
+          "type": 9
+        },
+        {
+          "id": "18:8629134500287076109",
+          "name": "NumeroLCD",
+          "type": 9
+        },
+        {
+          "id": "19:4239407583782778477",
+          "name": "InforCompleLCD",
+          "type": 9
+        },
+        {
+          "id": "20:1195740207607427908",
+          "name": "InforCompleLE",
+          "type": 9
+        },
+        {
+          "id": "22:2027219616668147561",
+          "name": "CEPLE",
+          "type": 9
+        },
+        {
+          "id": "23:3492438422838524819",
+          "name": "RuaLE",
+          "type": 9
+        },
+        {
+          "id": "24:4811188070279567845",
+          "name": "NumeroLE",
+          "type": 9
+        },
+        {
+          "id": "25:6617112772094243735",
+          "name": "BairroLE",
+          "type": 9
+        },
+        {
+          "id": "26:2871493584427479129",
+          "name": "CidadeLE",
+          "type": 9
+        },
+        {
+          "id": "27:5694974123845484492",
+          "name": "UFLE",
+          "type": 9
+        },
+        {
+          "id": "28:5892711240049869675",
+          "name": "Frete",
+          "type": 9
+        },
+        {
+          "id": "29:4052914664161991751",
+          "name": "VolEstimado",
+          "type": 9
+        },
+        {
+          "id": "30:4042985588637481616",
+          "name": "VolPrevPedido",
+          "type": 9
+        },
+        {
+          "id": "31:2962143332824865499",
+          "name": "CapaTanque",
+          "type": 9
+        },
+        {
+          "id": "32:2202737274023090769",
+          "name": "HoraLimite",
+          "type": 9
+        },
+        {
+          "id": "33:8229644217542233156",
+          "name": "TipoLigEle",
+          "type": 9
+        },
+        {
+          "id": "34:4580973237720197842",
+          "name": "RespoPeloRece",
+          "type": 9
+        },
+        {
+          "id": "35:7361736632695158886",
+          "name": "Mangote",
+          "type": 9
+        },
+        {
+          "id": "36:340346754808699569",
+          "name": "CliPossuBalan",
+          "type": 9
+        },
+        {
+          "id": "37:3882168847657546272",
+          "name": "TipoEntre",
+          "type": 9
+        },
+        {
+          "id": "38:3755230345800844463",
+          "name": "RepeluOuClien",
+          "type": 9
+        },
+        {
+          "id": "39:6394997192331263761",
+          "name": "RegiANP",
+          "type": 9
+        },
+        {
+          "id": "40:5994137849702292665",
+          "name": "Tele",
+          "type": 9
+        },
+        {
+          "id": "41:6086327005837952342",
+          "name": "ObsTipoTamanho",
+          "type": 9
+        },
+        {
+          "id": "42:4598244138925494460",
+          "name": "RestriCami",
+          "type": 9
+        },
+        {
+          "id": "43:5791674012610097285",
+          "name": "InfoCompleCP",
+          "type": 9
+        },
+        {
+          "id": "44:8823132489490646018",
+          "name": "ApresComerciCP",
+          "type": 9
+        }
+      ],
+      "relations": [
+        {
+          "id": "1:8379727340687021386",
+          "name": "produtos",
+          "targetId": "2:7685654565975572917"
+        }
+      ]
+    },
+    {
+      "id": "2:7685654565975572917",
+      "lastPropertyId": "4:5656343844309070410",
+      "name": "Produto",
+      "properties": [
+        {
+          "id": "1:5489808152740321155",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:1097484432838979833",
+          "name": "NomeProduto",
+          "type": 9
+        },
+        {
+          "id": "3:2676220685017692124",
+          "name": "PrazoPagamento",
+          "type": 9
+        },
+        {
+          "id": "4:5656343844309070410",
+          "name": "PrecoLitro",
+          "type": 9
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "3:7320122582419741767",
+      "lastPropertyId": "6:7766707758887130751",
+      "name": "CheckListItem",
+      "properties": [
+        {
+          "id": "1:3713931074170172804",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:2822031602701061823",
+          "name": "title",
+          "type": 9
+        },
+        {
+          "id": "3:4534133823419192882",
+          "name": "isCompleted",
+          "type": 1
+        },
+        {
+          "id": "4:1597728181843491194",
+          "name": "filePath",
+          "type": 9
+        },
+        {
+          "id": "5:7490758455964755987",
+          "name": "lastUpdated",
+          "type": 10
+        },
+        {
+          "id": "6:7766707758887130751",
+          "name": "clienteId",
+          "type": 11,
+          "flags": 520,
+          "indexId": "1:8365662459693108534",
+          "relationTarget": "Cliente"
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "lastEntityId": "3:7320122582419741767",
+  "lastIndexId": "1:8365662459693108534",
+  "lastRelationId": "2:8373873206917320911",
+  "lastSequenceId": "0:0",
+  "modelVersion": 5,
+  "modelVersionParserMinimum": 5,
+  "retiredEntityUids": [],
+  "retiredIndexUids": [],
+  "retiredPropertyUids": [
+    6473737242600915311
+  ],
+  "retiredRelationUids": [
+    8373873206917320911
+  ],
+  "version": 1
+}
