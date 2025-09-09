@@ -1,9 +1,12 @@
+import 'dart:io';
+
 import 'package:cadastro_cliente/FormDataProvider.dart';
 import 'package:cadastro_cliente/model/checklist_model.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'pages/login/login_screen.dart';
 import 'objectbox.g.dart';
+import 'package:path_provider/path_provider.dart';
 
 late final Store store;
 late final Admin _admin;
@@ -11,8 +14,10 @@ late final Admin _admin;
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   final store = await openStore();
+  final myBox = store.box<CheckListItem>();
+  myBox.removeAll();
   if (Admin.isAvailable()) {
-    _admin= Admin(store);
+    _admin = Admin(store);
   }
   runApp(MyApp(store: store));
 }
@@ -43,4 +48,9 @@ class MyApp extends StatelessWidget {
       ),
     );
   }
+}
+
+void deleteDbFiles() async {
+  Directory docDir = await getApplicationDocumentsDirectory();
+  Directory(docDir.path + '/CheckListItem').delete();
 }

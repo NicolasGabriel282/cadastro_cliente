@@ -42,12 +42,18 @@ class ChecklistRepository {
   }
 
   List<CheckListItem> getAllItems(int id) {
-    return box.getAll();
+    final cliente = clientebox.get(id);
+    return cliente?.documentos.toList() ?? [];
   }
 
   CheckListItem? getChecklistItemByTitle(String title, int id) {
-    final query = box.query(CheckListItem_.title.equals(title).and 
-    (CheckListItem_.cliente.equals(id))).build();
+    final query = box
+        .query(
+          CheckListItem_.title
+              .equals(title)
+              .and(CheckListItem_.cliente.equals(id)),
+        )
+        .build();
     final result = query.findFirst();
     query.close();
     return result;

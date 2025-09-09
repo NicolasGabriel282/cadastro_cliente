@@ -41,10 +41,7 @@ class _CheckListState extends State<CheckListPage> {
         CheckListItem(title: "Contrato Social e Última Alteração Contratual"),
         CheckListItem(title: "Documentação dos Sócios"),
         CheckListItem(title: "Comprovante de Endereço"),
-        CheckListItem(
-          title:
-              "Relação de faturamento dos últimos 12 meses(Assinada pelo contador)",
-        ),
+        CheckListItem(title:"Relação de faturamento dos últimos 12 meses(Assinada pelo contador)",),
         CheckListItem(title: "Relação de Bens e Frotas de Veículos (Próprios)"),
         CheckListItem(
           title: "Fotos do Tanque de Armazenamento e Infra-estrutura geral",
