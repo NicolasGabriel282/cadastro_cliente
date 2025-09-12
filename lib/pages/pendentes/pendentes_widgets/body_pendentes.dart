@@ -1,6 +1,7 @@
 import 'package:cadastro_cliente/main.dart';
 import 'package:cadastro_cliente/model/checklist_model.dart';
 import 'package:cadastro_cliente/model/objectbox.dart';
+import 'package:cadastro_cliente/pages/cadastro/cadastro_page.dart';
 import 'package:cadastro_cliente/pages/home/home_widgets/home_appbar.dart';
 import 'package:cadastro_cliente/pages/home/home_widgets/home_list_item.dart';
 import 'package:cadastro_cliente/pages/home/home_widgets/home_list_model.dart';
@@ -25,7 +26,7 @@ class _HomePageContentStateState extends State<BodyPendentes> {
 
   @override
   Widget build(BuildContext context) {
-    final repository = Provider.of<ChecklistRepository>(context,listen: false);
+    final repository = Provider.of<ChecklistRepository>(context, listen: false);
     return Scaffold(
       body: FutureBuilder<List<Cliente>>(
         future: _loadClientes(),
@@ -102,7 +103,10 @@ class _HomePageContentStateState extends State<BodyPendentes> {
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                    builder: (context) => CheckListPage(repository: repository,id : cliente.id),
+                                    builder: (context) => CheckListPage(
+                                      repository: repository,
+                                      id: cliente.id,
+                                    ),
                                   ),
                                 );
                               },
@@ -112,8 +116,15 @@ class _HomePageContentStateState extends State<BodyPendentes> {
                           Align(
                             alignment: Alignment.centerLeft,
                             child: TextButton(
-                              onPressed: () {},
-                              child: Text('Ver Detalhes'),
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(builder: (context)=>
+                                  CadastroPage( id: cliente.id),
+                                  ),
+                                );
+                              },
+                              child: Text('Editar'),
                             ),
                           ),
                         ],

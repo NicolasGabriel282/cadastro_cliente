@@ -116,8 +116,11 @@ class Page1 extends StatelessWidget {
                               ),
                             ),
                             value: provider.IsChecked,
-                            onChanged: (value) {
-                              provider.toggleCheckbox(value ?? false);
+                            onChanged: (bool? value) {
+                              if(value != null)
+                              {
+                              provider.toggleCheckbox(value);
+                              }
                             },
                           ),
                           if (provider.IsChecked) ...{

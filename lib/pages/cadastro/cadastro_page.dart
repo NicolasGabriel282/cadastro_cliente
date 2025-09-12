@@ -2,13 +2,17 @@ import 'package:cadastro_cliente/pages/cadastro/cadastro_widgets/cadastro_appbar
 import 'package:cadastro_cliente/pages/cadastro/cadastro_widgets/cadastro_content.dart';
 import 'package:flutter/material.dart';
 
-class CadastroPage extends StatelessWidget {
-  const CadastroPage({super.key});
+class CadastroPage extends StatefulWidget {
+  final int? id;
+  const CadastroPage({Key? key, this.id});
 
   @override
+  State<CadastroPage> createState() => _CadastroPageState();
+}
+
+class _CadastroPageState extends State<CadastroPage> {
+  @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: CadastroContent(),
-    );
+    return Scaffold(body: CadastroContent(id : widget.id));
   }
 }

@@ -8,27 +8,26 @@ import 'pages/login/login_screen.dart';
 import 'objectbox.g.dart';
 import 'package:path_provider/path_provider.dart';
 
-late final Store store;
 late final Admin _admin;
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   final store = await openStore();
-  final myBox = store.box<CheckListItem>();
-  myBox.removeAll();
+  //final myBox = store.box<CheckListItem>();
+  //myBox.removeAll();
   if (Admin.isAvailable()) {
     _admin = Admin(store);
   }
-  runApp(MyApp(store: store));
+  runApp(Provider<Store>.value(value: store, child: const MyApp()));
 }
 
 class MyApp extends StatelessWidget {
-  final Store store;
-  const MyApp({Key? key, required this.store}) : super(key: key);
+  const MyApp({super.key});
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    final store = Provider.of<Store>(context,listen: false);
     return MultiProvider(
       providers: [
         Provider<Store>.value(value: store),

@@ -29,7 +29,6 @@ class InseriClientes {
       UFLCD: provider.ufCD,
       NumeroLCD: provider.numeroCD,
       InforCompleLCD: provider.infoCompleCD,
-
       CEPLE: provider.cepLePage2,
       RuaLE: provider.ruaPage2,
       NumeroLE: provider.numeroPage2,

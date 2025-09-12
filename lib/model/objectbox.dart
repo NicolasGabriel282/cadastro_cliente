@@ -15,6 +15,7 @@ class Cliente {
   String Cidade;
   String UF;
   String? InforComple;
+  bool? check;
   String? CEPLCD;
   String? RuaLCD;
   String? BairroLCD;
@@ -70,6 +71,7 @@ class Cliente {
     this.UFLCD,
     this.NumeroLCD,
     this.InforCompleLCD,
+    this.check,
 
     required this.CEPLE,
     required this.RuaLE,

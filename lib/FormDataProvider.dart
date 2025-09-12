@@ -1,4 +1,3 @@
-import 'package:cadastro_cliente/pages/cadastro/cadastro_widgets/cadastro_content_page_1.dart';
 import 'package:flutter/material.dart';
 import 'package:cadastro_cliente/pages/cadastro/cadastro_api/api_cep.dart';
 import 'package:cadastro_cliente/pages/cadastro/cadastro_api/api_cnpj.dart';
@@ -78,112 +77,121 @@ class FormDataProvider with ChangeNotifier {
 
   void setCNPJ(String value) {
     _CNPJ = value;
+    cnpjController.text = value;
     notifyListeners();
   }
 
   void setRazaoSocial(String value) {
     _RazaoSocial = value;
+    razaoController.text = value;
     notifyListeners();
   }
 
   void setInscricaoEsta(String value) {
     _InscEsPro = value;
+    inscEsproController.text = value;
     notifyListeners();
   }
 
   void setInscricaoMun(String value) {
     _InscMun = value;
-    notifyListeners();
-  }
-
-  void setInscEsPro(String value) {
-    _InscEsPro = value;
-    notifyListeners();
-  }
-
-  void setInscMun(String value) {
-    _InscMun = value;
+    inscMunController.text = value;
     notifyListeners();
   }
 
   void setCEP(String value) {
     _CEPCD = value;
+    cepController.text = value;
     notifyListeners();
   }
 
   void setRua(String value) {
     _RuaCD = value;
+    ruaController.text = value;
     notifyListeners();
   }
 
   void setNumero(String value) {
     _NumeroCD = value;
+    numeroController.text = value;
     notifyListeners();
   }
 
   void setBairro(String value) {
     _BairroCD = value;
+    bairroController.text = value;
     notifyListeners();
   }
 
   void setCidade(String value) {
     _CidadeCD = value;
+    cidadeController.text = value;
     notifyListeners();
   }
 
   void setUf(String value) {
     _UfCD = value;
+    ufController.text = value;
     notifyListeners();
   }
 
-  void setInfCom(String value) {
+  void setInfCom(String? value) {
     _InfoCompleCD = value;
+    infoComCDConController.text = value ?? '';
     notifyListeners();
   }
 
   void toggleCheckbox(bool value) {
     _isChecked = value;
+
     notifyListeners();
   }
 
   void setCEPDf(String value) {
     _CEPCDInfCon = value;
+    cepControllerLCD.text = value;
     notifyListeners();
   }
 
   void setRuaDf(String value) {
     _RuaCDInfCon = value;
+    ruaControllerLCD.text = value;
     notifyListeners();
   }
 
   void setBairroDf(String value) {
     _BairroCDInfCon = value;
+    bairroControllerLCD.text = value;
     notifyListeners();
   }
 
   void setCidadeDf(String value) {
     _CidadeCDInfCon = value;
+    cidadeControllerLCD.text = value;
     notifyListeners();
   }
 
   void setUfDf(String value) {
     _UFCdInfCon = value;
+    ufControllerLCD.text = value;
     notifyListeners();
   }
 
   void setNumeroCdInfCon(String value) {
     _NumeroCdInfCon = value;
+    numeroControllerLCD.text = value;
     notifyListeners();
   }
 
   void setInfoComCdCon(String value) {
     _InfoComCDCon = value;
+    infoComCDConController.text = value;
     notifyListeners();
   }
 
   Future<void> buscarDados(String cnpj, BuildContext context) async {
     if (cnpj.isEmpty) return;
-    if (cnpj.length < 14 ) return;
+    if (cnpj.length < 14) return;
     _isLoadingCNPJ = true;
     _errorMessageCNPJ = null;
     notifyListeners();
@@ -330,81 +338,97 @@ class FormDataProvider with ChangeNotifier {
 
   void setCepPage2(String value) {
     _cepLe = value;
+    cepControllerPage2.text = value;
     notifyListeners();
   }
 
   void setRuaPage2(String value) {
     _ruaLe = value;
+    ruaControllerPage2.text = value;
     notifyListeners();
   }
 
   void setBairroPage2(String value) {
     _bairroLe = value;
+    bairroControllerPage2.text = value;
     notifyListeners();
   }
 
   void setCidadePage2(String value) {
     _cidadeLe = value;
+    cidadeControllerPage2.text = value;
     notifyListeners();
   }
 
   void setNumeroPage2(String value) {
     _numeroLe = value;
+    numeroControllerPage2.text = value;
     notifyListeners();
   }
 
   void setEstadoPage2(String value) {
     _estadoLe = value;
+    ufControllerPage2.text = value;
     notifyListeners();
   }
 
   void setInfoComplPage2(String value) {
     _infoCompleLe = value;
+    infoComplControllerPage2.text = value;
     notifyListeners();
   }
 
   void setANPPage2(String value) {
     _ANPLe = value;
+    ANPLeControllerPage2 = value;
     notifyListeners();
   }
 
   void setFretePage2(String value) {
     _freteLe = value;
+    freteLeControllerPage2.text = value;
     notifyListeners();
   }
 
   void setVolumeEstimadoPage2(String value) {
     _volumeEstimadoLe = value;
+    volumeEstimadoLeControllerPage2.text = value;
     notifyListeners();
   }
 
   void setVolumePrevPage2(String value) {
     _volumePrevLe = value;
+    volumePrevLeControllerPage2.text = value;
     notifyListeners();
   }
 
   void setCapTanPage2(String value) {
     _capTanLe = value;
+    capTanLeControllerPage2.text = value;
     notifyListeners();
   }
 
   void setHorarioLimPage2(String value) {
     _horaLimEnLe = value;
+    horaLimEnLeControllerPage2.text = value;
     notifyListeners();
   }
 
   void setTipoLigaEletricaPage2(String value) {
     _tipoLigaEletricaLe = value;
+    tipoLigaEletricaControllerPage2.text = value;
     notifyListeners();
   }
 
   void setRespoRecPage2(String value) {
     _respoRecLe = value;
+    responRecControllerPage2.text = value;
     notifyListeners();
   }
 
   void setMangoPage2(String value) {
     _MangoLe = value;
+    mangoteControllerPage2.text = value;
     notifyListeners();
   }
 
@@ -425,16 +449,19 @@ class FormDataProvider with ChangeNotifier {
 
   void setTeleCelularPage2(String value) {
     _TeleCelulaLe = value;
+    TeleCelularControllerPage2.text = value;
     notifyListeners();
   }
 
   void setTipoTamPage2(String value) {
     _TipoTamLe = value;
+    tipoTamControllerPage2.text = value;
     notifyListeners();
   }
 
   void setResCaminPage2(String value) {
     _ResCaminLe = value;
+    ResCaminControllerPage2.text = value;
     notifyListeners();
   }
 
