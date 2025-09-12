@@ -472,6 +472,7 @@ Widget ClienteBalancaLe(FormDataProvider provider) {
         child: Text("Sim", style: TextStyle()),
       ),
       DropdownMenuItem(value: "Nao", child: Text("Não")),
+      DropdownMenuItem(value: "", child: Text(""))
     ],
     value: provider.clientePossuiBalancaPage2,
     onChanged: (value) {
@@ -496,6 +497,7 @@ Widget TipoDeEntregaLe(FormDataProvider provider) {
     items: [
       DropdownMenuItem(value: "CIF", child: Text("CIF")),
       DropdownMenuItem(value: "FOB", child: Text("FOB")),
+      DropdownMenuItem(value: "", child: Text(""))
     ],
     value: provider.tpEntregaControllerPage2,
     onChanged: (value) {
@@ -520,6 +522,7 @@ Widget RepelubOuClienteLe(FormDataProvider provider) {
     items: [
       DropdownMenuItem(value: 'REPELUB', child: Text("REPELUB")),
       DropdownMenuItem(value: "Cliente", child: Text("Cliente")),
+      DropdownMenuItem(value: "", child: Text(""))
     ],
     value: provider.RepelubOuClienteControllerPage2,
     onChanged: (value) {
@@ -544,6 +547,7 @@ Widget TemRegistroAnpLe(FormDataProvider provider) {
     items: [
       DropdownMenuItem(value: "Sim", child: Text("Sim")),
       DropdownMenuItem(value: "Não", child: Text("Não")),
+      DropdownMenuItem(value: "", child: Text(""))
     ],
     value: provider.ANPLeControllerPage2,
     onChanged: (value) {
